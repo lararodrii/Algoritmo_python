@@ -1,0 +1,15 @@
+
+#11_Desenvolva uma lógica que leia os valores de A, B e C de uma equação do segundo grau e mostre o valor de Delta.
+a = float(input("Coloque o valor de A"))
+b = float(input("Coloque o valor de B"))
+c = float(input("Coloque o valor de C"))
+delta = (b**2) - (4 * a * c)
+print("O valor da equação é:", delta)
+
+#12_Crie um programa que leia o preço de um produto, calcule e mostre o seu PREÇO PROMOCIONAL, com 5% de desconto.
+produto = float(input("Coloque o valor do produto"))
+valor_prod = produto / 0.05
+preco_promocional = produto - desconto
+print("O preço promocional é de:", preco_promocional)
+
+
