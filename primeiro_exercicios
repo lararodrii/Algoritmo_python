@@ -1,3 +1,67 @@
+#1_Escreva um programa que mostre na tela a mensagem "Olá, Mundo!"#
+print("Olá, Mundo!")
+
+#2_Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boasvindas para ela#
+nome = input ("Digite seu nome ")
+print("Olá", nome,"é um prazer te conhecer!")
+
+#3_Crie um programa que leia o nome e o salário de um funcionário#
+nome = input ("Digite seu nome ")
+salario = input ("Digite seu salário")
+print("O funcionário", nome, "tem um salário de", salario)
+
+#4_Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório entre eles#
+num1 = int(input("Digite o primeiro número"))
+num2 = int(input("Digite o segundo número"))
+soma = num1 + num2
+print("A soma deles é", soma)
+
+#5_Faça um programa que leia as duas notas de um aluno em uma matéria e mostre na tela a sua média na disciplina#
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+media = (nota1 + nota2) / 2
+print("A média é:", media)
+
+#6_Faça um programa que leia um número inteiro e mostre o seu antecessor e seu sucessor#
+numero = int (input("Digite um numero"))
+antecessor = numero - 1
+sucessor = numero + 1
+print("O antecessor do número é", antecessor,"O posterior do número é", sucessor)
+
+#7_Crie um algoritmo que leia um número real e mostre na tela o seu dobro e a sua terça parte#
+valor = float (input("Digite um numero"))
+dobro = valor * 2
+terceira_part = valor / 3
+print("O dobro do número é", dobro,"A terça parte do número é", terceira_part)
+
+#8_Desenvolva um programa que leia uma distância em metros e mostre os valores
+relativos em outras medidas.
+
+distancia_metros = float(input("Digite uma distância em metros: "))
+distancia_km = distancia_metros / 1000  
+distancia_cm = distancia_metros * 100  
+distancia_mm = distancia_metros * 1000  
+
+print(f"A distância de {distancia_metros} metros corresponde a:")
+print(f"{distancia_km} quilômetros")
+print(f"{distancia_cm} centímetros")
+print(f"{distancia_mm} milímetros")
+
+#9_Faça um algoritmo que leia quanto dinheiro uma pessoa tem na carteira (em R$)
+e mostre quantos dólares ela pode comprar. Considere US$1,00 = R$3,45.
+carteira = float(input("Digite o valor em reais: "))
+valor  = carteira/3.45
+print("Com R${:.2f} você pode comprar US${:.2f}".format(carteira, valor))
+
+#10_Faça um algoritmo que leia a largura e altura de uma parede, calcule e
+mostre a área a ser pintada e a quantidade de tinta necessária para o serviço,
+sabendo que cada litro de tinta pinta uma área de 2metros quadrados.
+largura = float(input("Digite a largura da parede: "))
+altura = float(input("Digite a altura da parede: "))
+area = largura * altura
+tinta = area / 2
+print("Sua parede tem a dimensão de {}x{} e sua área é de {}m².".format(largura, altura, area))
+print("Você precisa de {} litros de tinta.".format(tinta))
 
 #11_Desenvolva uma lógica que leia os valores de A, B e C de uma equação do segundo grau e mostre o valor de Delta.
 a = float(input("Coloque o valor de A"))
