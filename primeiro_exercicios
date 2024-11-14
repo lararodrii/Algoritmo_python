@@ -204,6 +204,88 @@ if (reta1 + reta2 < reta3) or (reta3 + reta2 < reta1):
 else:
     print("forma")
 
+#26) Escreva um algoritmo que leia dois números inteiros e compare-os, mostrando na tela uma das mensagens abaixo: - O primeiro valor é o maior- O segundo valor é o maior - Não existe valor maior, os dois são iguais
+n1 = int(input("digite o primeiro numero "))
+n2 = int(input("digite o segundo numero "))
+comp = n1-n2 
+
+if comp > 0 :
+    print ("o primeiro valor é maior")
+
+if comp < 0 :
+    print ("o segundo valor é maior")
+
+if comp == 0 :
+     print ("os dois sao iguais")
+
+
+#27) Crie um programa que leia duas notas de um aluno e calcule a sua média, mostrando uma mensagem no final, de acordo com a média atingida:
+# - Média até 4.9: REPROVADO
+# - Média entre 5.0 e 6.9: RECUPERAÇÃO
+# - Média 7.0 ou superior: APROVADO
+
+n1 = float(input("Escreva a primeira nota"))
+n2 = float(input("Escreva a segunda nota"))
+media = (n1+n2)/2
+if media >= 7:
+    print("Aprovado")
+if media <= 4.9:
+    print("Reprovado")
+if 5.0 <= media <= 6.9:
+    print("Recuperação")
+
+#28) Faça um programa que leia a largura e o comprimento de um terreno retangular, calculando e mostrando a sua área em m². O programa também deve mostrar a classificação desse terreno, de acordo com a lista abaixo:
+ # - Abaixo de 100m² = TERRENO POPULAR
+ # - Entre 100m² e 500m² = TERRENO MASTER
+ # - Acima de 500m² = TERRENO VIP
+largura = float(input("Escreva a largura: "))
+comprimento = float(input("Escreva o comprimento: "))
+area = largura * comprimento
+
+print(f"A área do terreno é {area}m²")
+if area > 500:
+    print("TERRENO VIP")
+if 100 <= area <= 500:
+        print("TERRENO MASTER")
+else:
+        print("TERRENO POPULAR")
+
+#29) Desenvolva um programa que leia o nome de um funcionário, seu salário, quantos anos ele trabalha na empresa e mostre seu novo salário, reajustado de acordo com a tabela a seguir:
+ #- Até 3 anos de empresa: aumento de 3%
+ #- entre 3 e 10 anos: aumento de 12.5%
+ #- 10 anos ou mais: aumento de 20%
+nome = input("Digite seu nome: ")
+salario = float(input("Digite seu salário: "))
+anos_trabalhado = float(input("Quantos anos você trabalha na empresa? "))
+
+if anos_trabalhado <= 3:
+    porcentagem = salario * 0.03
+    novo_salario = salario + porcentagem
+    print(f"Seu novo salário é R${novo_salario:.2f}")
+
+if 3 < anos_trabalhado <= 10:
+    porcentagem = salario * 0.125
+    novo_salario = salario + porcentagem
+    print(f"Seu novo salário é R${novo_salario:.2f}")
+
+if anos_trabalhado > 10:
+    porcentagem = salario * 0.20
+    novo_salario = salario + porcentagem
+    print(f"Seu novo salário é R${novo_salario:.2f}")
+
+#30) [DESAFIO] Refaça o algoritmo 25, acrescentando o recurso de mostrar que tipo de triângulo será formado:
+ # - EQUILÁTERO: todos os lados iguais
+ # - ISÓSCELES: dois lados iguais
+ # - ESCALENO: todos os lados diferentes
+
+reta1 = int(input("Digite o tamanho da primeira"))
+reta2 = int(input("Digite o tamanho da segunda"))
+reta3 = int(input("Digite o tamanho da terceiro"))
+
+if (reta1 + reta2 < reta3) or (reta3 + reta2 < reta1):
+    print("nao forma")
+else:
+    print("forma")
 
 
 
