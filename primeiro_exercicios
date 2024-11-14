@@ -278,14 +278,23 @@ if anos_trabalhado > 10:
  # - ISÓSCELES: dois lados iguais
  # - ESCALENO: todos os lados diferentes
 
-reta1 = int(input("Digite o tamanho da primeira"))
-reta2 = int(input("Digite o tamanho da segunda"))
-reta3 = int(input("Digite o tamanho da terceiro"))
+reta1 = int(input("Digite o tamanho da primeira reta: "))
+reta2 = int(input("Digite o tamanho da segunda reta: "))
+reta3 = int(input("Digite o tamanho da terceira reta: "))
 
-if (reta1 + reta2 < reta3) or (reta3 + reta2 < reta1):
-    print("nao forma")
+if (reta1 + reta2 > reta3) and (reta1 + reta3 > reta2) and (reta2 + reta3 > reta1):
+    print("Forma um triângulo.")
+    
+    if reta1 == reta2 == reta3:
+        print("Triângulo EQUILÁTERO")
+    
+    elif reta1 != reta2 and reta2 != reta3 and reta3 != reta1:
+        print("Triângulo ESCALENO")
+    
+    elif reta1 == reta2 or reta2 == reta3 or reta3 == reta1:
+        print("Triângulo ISÓSCELES")
 else:
-    print("forma")
+    print("Não forma um triângulo.")
 
 
 
