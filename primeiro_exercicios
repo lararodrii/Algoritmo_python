@@ -296,6 +296,42 @@ if (reta1 + reta2 > reta3) and (reta1 + reta3 > reta2) and (reta2 + reta3 > reta
 else:
     print("Não forma um triângulo.")
 
+#31) [DESAFIO] Crie um jogo de JoKenPo (Pedra-Papel-Tesoura)
+j1 = input("faça sua jogada ")
+j2 = input("faça sua jogada ")
+
+if j1 == j2 :
+    print ("Empate")
+elif j1 == "pedra" and j2 == "papel" :
+    print ("jogador 2 venceu")
+elif j1 == "pedra" and j2 == "tesoura" :
+    print ("Jogador 1 venceu")
+
+if j1 == "papel" and j2 == "pedra" :
+    print ("jogador 1 venceu")
+elif j1 == "papel" and j2 == "tesoura" :
+    print ("Jogador 2 venceu")
+    
+if j1 == "tesoura" and j2 == "papel" :
+    print ("jogador 1 venceu")
+elif j1 == "tesoura" and j2 == "pedra" :
+    print ("Jogador 2 venceu")
+
+#32) [DESAFIO] Crie um jogo onde o computador vai sortear um número entre 1 e 5 o jogador vai tentar descobrir qual foi o valor sorteado.
+import random
+
+sorteio=random.randrange(1, 6)
+
+jogador = int(input("Escreva um número"))
+if jogador == sorteio:
+    print("Acertou", sorteio)
+
+if jogador != sorteio:
+    print("Errou", sorteio)
+    
+
+
+
 
 
 
