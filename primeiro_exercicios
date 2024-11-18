@@ -330,7 +330,16 @@ if jogador != sorteio:
     print("Errou", sorteio)
     
 
-
+#33) Escreva um programa para aprovar ou não o empréstimo bancário para a compra de uma casa. O programa vai perguntar o valor da casa, o salário do comprador e em quantos anos ele vai pagar. Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o empréstimo será negado.
+valor_casa = float(input("escreva o valor da casa"))
+salario = float(input("escreva o salario"))
+anos = int(input("Escreva em quantos anos vai pagar"))
+meses = anos * 12
+prestacao = valor_casa / meses
+if prestacao > salario * 0.30:
+    print ("Negado")
+else :
+    print ("Aprovado")
 
 
 
