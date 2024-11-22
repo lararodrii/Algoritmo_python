@@ -469,9 +469,70 @@ while (contador < 12):
        contador = contador + 1
 print("Acabou!")
        
-        
-    
-    
+
+#39) Faça um algoritmo que mostre na tela a seguinte contagem:
+#10 9 8 7 6 5 4 3 Acabou!
+contador = 10
+while (contador >= 3):
+       print(contador)
+       contador = contador - 1
+print("Acabou!")
+
+
+#40) Crie um aplicativo que mostre na tela a seguinte contagem:
+#0 3 6 9 12 15 18 Acabou!
+contador = 0
+while (contador <= 18):
+       print(contador)
+       contador = contador + 3
+print("Acabou!")
+
+#41) Desenvolva um programa que mostre na tela a seguinte contagem:
+#100 95 90 85 80 ... 0 Acabou!
+contador = 100
+while (contador >= 0):
+       print(contador)
+       contador = contador - 5
+print("Acabou!")
+
+#42) Faça um algoritmo que pergunte ao usuário um número inteiro e positivo
+#qualquer e mostre uma contagem até esse valor:
+#Ex: Digite um valor: 35
+#Contagem: 1 2 3 4 5 6 7 ... 33 34 35 Acabou!
+numero=int(input("Digite um número inteiro positivo"))
+contador = 1
+while (contador <= numero):
+       print(contador)
+       contador = contador + 1
+print("Acabou!")
+
+#43) Desenvolva um algoritmo que mostre uma contagem regressiva de 30 até 1,
+#marcando os números que forem divisíveis por 4, exatamente como mostrado abaixo:
+#30 29 [28] 27 26 25 [24] 23 22 21 [20] 19 18 17 [16]...
+contador = 30
+while (contador >= 1):
+    if contador%4==0:
+        print("[",contador,"]")
+    else:
+        print(contador)
+    contador = contador - 1
+else:    
+    print("Acabou!")
+
+#44) Crie um algoritmo que leia o valor inicial da contagem, o valor final e o
+#incremento, mostrando em seguida todos os valores no intervalo:
+#Ex: Digite o primeiro Valor: 3
+#Digite o último Valor: 10
+#Digite o incremento: 2
+#Contagem: 3 5 7 9 Acabou!
+valor1=int(input("Digite o valor inicial"))
+valorf=int(input("Digite o valor final"))
+incremento=int(input("Digite o valor para adicionar"))
+contador = valor1
+while (contador <= valorf):
+       print(contador)
+       contador = contador + incremento
+print("Acabou!")
 
 
 
