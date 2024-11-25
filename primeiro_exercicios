@@ -534,8 +534,33 @@ while (contador <= valorf):
        contador = contador + incremento
 print("Acabou!")
 
+#45) O programa acima vai ter um problema quando digitarmos o primeiro valor
+#maior que o último. Resolva esse problema com um código que funcione em qualquer
+#situação.
+primeiro_valor = int(input("Digite o primeiro valor"))
+ultimo_valor = int(input("Digite o último valor"))
+incremento = int(input("Digite o incremento"))
 
+if primeiro_valor > ultimo_valor :
+    auxiliar = primeiro_valor
+    primeiro_valor = ultimo_valor
+    ultimo_valor = auxiliar
+    
+while primeiro_valor <= ultimo_valor:
+    print(primeiro_valor)
+    primeiro_valor = primeiro_valor + incremento
+print("Acabou!")
 
+#46) Crie um programa que calcule e mostre na tela o resultado da soma entre 6 +
+#8 + 10 + 12 + 14 + ... + 98 + 100.
+cont = 6
+soma = 1
+
+while cont <= 100 :
+    soma = soma + cont
+    cont = cont + 2
+    
+print("Soma é igual ", soma)
 
 
 
