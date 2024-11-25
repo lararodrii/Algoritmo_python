@@ -562,6 +562,18 @@ while cont <= 100 :
     
 print("Soma é igual ", soma)
 
+#47) Desenvolva um aplicativo que mostre na tela o resultado da expressão 500 +
+#450 + 400 + 350 + 300 + ... + 50 + 0
+primeiro_termo = 500
+ultimo_termo = 0 
+soma = 0 
+termo_atual = primeiro_termo
+
+while termo_atual >= ultimo_termo:
+    soma = soma + termo_atual
+    termo_atual = termo_atual - 50
+    
+print ("Soma é igual: ", soma)
 
 
 
