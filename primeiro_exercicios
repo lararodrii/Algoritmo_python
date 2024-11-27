@@ -628,3 +628,158 @@ while contador < 20:
 print(f"Quantos números estão acima de 5: {acima_5}")
 print(f"Quantos números são divisíveis por 3: {div3}")
 
+# 51) Faça um aplicativo que leia o preço de 8 produtos. No final, mostre na tela
+# qual foi o maior e qual foi o menor preço digitados.
+
+maior_preco = float(input("Digite o preço do produto 1: "))
+menor_preco = maior_preco
+
+contador = 2
+while contador <= 8:
+    preco = float(input(f"Digite o preço do produto {contador}: "))
+    if preco > maior_preco:
+        maior_preco = preco
+    if preco < menor_preco:
+        menor_preco = preco
+    contador += 1
+
+print(f"Maior preço: {maior_preco}")
+print(f"Menor preço: {menor_preco}")
+
+
+# 52) Crie um algoritmo que leia a idade de 10 pessoas, mostrando no final:
+# a) Qual é a média de idade do grupo
+# b) Quantas pessoas tem mais de 18 anos
+# c) Quantas pessoas tem menos de 5 anos
+# d) Qual foi a maior idade lida
+
+soma_idades = 0
+mais_de_18 = 0
+menos_de_5 = 0
+maior_idade = 0
+contador = 1
+
+while contador <= 10:
+    idade = int(input(f"Digite a idade da pessoa {contador}: "))
+    soma_idades += idade
+    
+    if idade > 18:
+        mais_de_18 += 1
+    if idade < 5:
+        menos_de_5 += 1
+    if idade > maior_idade:
+        maior_idade = idade
+    
+    contador += 1
+
+media_idade = soma_idades / 10
+print(f"Média de idade: {media_idade:.2f}")
+print(f"Pessoas com mais de 18 anos: {mais_de_18}")
+print(f"Pessoas com menos de 5 anos: {menos_de_5}")
+print(f"Maior idade lida: {maior_idade}")
+
+
+# 53) Faça um programa que leia a idade e o sexo de 5 pessoas, mostrando no final:
+# a) Quantos homens foram cadastrados
+# b) Quantas mulheres foram cadastradas
+# c) A média de idade do grupo
+# d) A média de idade dos homens
+# e) Quantas mulheres tem mais de 20 anos
+
+soma_idades = 0
+soma_idades_homens = 0
+homens = 0
+mulheres = 0
+mulheres_mais_20 = 0
+contador = 1
+
+while contador <= 5:
+    idade = int(input(f"Digite a idade da pessoa {contador}: "))
+    sexo = input(f"Digite o sexo da pessoa {contador} (M/F): ").strip().upper()
+    
+    soma_idades += idade
+    
+    if sexo == 'M':
+        homens += 1
+        soma_idades_homens += idade
+    elif sexo == 'F':
+        mulheres += 1
+        if idade > 20:
+            mulheres_mais_20 += 1
+    
+    contador += 1
+
+media_idade = soma_idades / 5
+if homens > 0:
+    media_idade_homens = soma_idades_homens / homens
+else:
+    media_idade_homens = 0
+
+print(f"Quantidade de homens cadastrados: {homens}")
+print(f"Quantidade de mulheres cadastradas: {mulheres}")
+print(f"Média de idade do grupo: {media_idade:.2f}")
+print(f"Média de idade dos homens: {media_idade_homens:.2f}")
+print(f"Mulheres com mais de 20 anos: {mulheres_mais_20}")
+
+
+# 54) Desenvolva um aplicativo que leia o peso e a altura de 7 pessoas, mostrando no final:
+# a) Qual foi a média de altura do grupo
+# b) Quantas pessoas pesam mais de 90Kg
+# c) Quantas pessoas que pesam menos de 50Kg tem menos de 1.60m
+# d) Quantas pessoas que medem mais de 1.90m pesam mais de 100Kg.
+
+soma_alturas = 0
+mais_de_90kg = 0
+menos_50kg_menos_1_60m = 0
+mais_1_90m_mais_100kg = 0
+contador = 1
+
+while contador <= 7:
+    peso = float(input(f"Digite o peso da pessoa {contador} (kg): "))
+    altura = float(input(f"Digite a altura da pessoa {contador} (m): "))
+    
+    soma_alturas += altura
+    
+    if peso > 90:
+        mais_de_90kg += 1
+    if peso < 50 and altura < 1.60:
+        menos_50kg_menos_1_60m += 1
+    if altura > 1.90 and peso > 100:
+        mais_1_90m_mais_100kg += 1
+    
+    contador += 1
+
+media_altura = soma_alturas / 7
+
+print(f"Média de altura do grupo: {media_altura:.2f}")
+print(f"Pessoas que pesam mais de 90Kg: {mais_de_90kg}")
+print(f"Pessoas com peso menor que 50Kg e altura menor que 1.60m: {menos_50kg_menos_1_60m}")
+print(f"Pessoas com altura maior que 1.90m e peso maior que 100Kg: {mais_1_90m_mais_100kg}")
+
+# 55) [DESAFIO] Vamos melhorar o jogo que fizemos no exercício 32. O computador
+# vai sortear um número entre 1 e 10 e o jogador vai ter 4 tentativas para tentar acertar.
+
+import random
+
+numero_sorteado = random.randint(1, 10)
+tentativas = 4
+
+print("Bem-vindo ao jogo! Tente adivinhar o número entre 1 e 10.")
+
+while tentativas > 0:
+    tentativa = int(input(f"Você tem {tentativas} tentativas restantes. Qual é o seu palpite? "))
+    
+    if tentativa == numero_sorteado:
+        print("Parabéns! Você acertou o número!")
+        tentativas = 0  # Zera as tentativas para terminar o jogo
+    else:
+        tentativas -= 1
+        if tentativa < numero_sorteado:
+            print("O número sorteado é maior. Tente novamente!")
+        elif tentativa > numero_sorteado:
+            print("O número sorteado é menor. Tente novamente!")
+
+if tentativas == 0 and tentativa != numero_sorteado:
+    print(f"Você não acertou! O número sorteado era {numero_sorteado}.")
+
+
