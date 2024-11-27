@@ -782,4 +782,35 @@ while tentativas > 0:
 if tentativas == 0 and tentativa != numero_sorteado:
     print(f"Você não acertou! O número sorteado era {numero_sorteado}.")
 
+DESAFIO
+
+numero = int(input("Digite um valor múltiplo de 10: "))
+
+if numero % 10 != 0:
+    print("Número inválido. O número deve ser múltiplo de 10.")
+else:
+    
+    c100 = numero // 100
+    numero %= 100  # Atualiza o valor com o restante após retirar as cédulas de 100
+   
+    c50 = numero // 50
+    numero %= 50  # Atualiza o valor com o restante após retirar as cédulas de 50
+    
+    c20 = numero // 20
+    numero %= 20  # Atualiza o valor com o restante após retirar as cédulas de 20
+
+    c10 = numero // 10
+    numero %= 10  # Atualiza o valor com o restante após retirar as cédulas de 10
+
+    
+    if c100 > 0:
+        print(f"{c100} nota(s) de 100.00")
+    if c50 > 0:
+        print(f"{c50} nota(s) de 50.00")
+    if c20 > 0:
+        print(f"{c20} nota(s) de 20.00")
+    if c10 > 0:
+        print(f"{c10} nota(s) de 10.00")
+
+
 
