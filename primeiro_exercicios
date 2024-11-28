@@ -812,5 +812,38 @@ else:
     if c10 > 0:
         print(f"{c10} nota(s) de 10.00")
 
+DESAFIO 2
+#Criar um programa que o computador faça um sorteio de um numero de 1 ate 100 
+#E você terá que adivinhar o número sorteado, a cada vez que colocar o numero o computador terá que exibir a mensagem:
+#- você acertou o número;
+#- o número digitado é menor que o numero sorteado
+#- o numero digitado é maior que o numero sorteado
+#- o jogo poderá terminar quando você acertar o número ou quando for feita 10 tentativas
+import random
+
+sorteio = random.randint(1, 100)
+
+tentativas = 0
+
+while tentativas < 10:
+    jogador = int(input("Digite um número entre 1 e 100: "))
+    tentativas += 1  
+
+    if jogador == sorteio:
+        print(f"Você acertou! O número sorteado era {sorteio}.")
+        break  
+    elif jogador < sorteio:
+        print("O número digitado é menor que o sorteado.")
+    else:
+        print("O número digitado é maior que o sorteado.")
+
+    if tentativas == 10:
+        print(f"Você atingiu o número máximo de tentativas. O número sorteado era {sorteio}.")
+
+    
+    
+    
+    
+
 
 
