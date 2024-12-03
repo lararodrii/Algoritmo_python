@@ -916,7 +916,54 @@ else:
 # Exibe o vencedor
 print(f"O vencedor da eleição é: {vencedor}")
 
-    
+
+PAPEL TESOURA
+import random
+
+print("Bem-vindo ao jogo Pedra, Papel e Tesoura!")
+
+# Loop principal para o jogo
+jogar_novamente = "S"
+
+while jogar_novamente == "S":
+    # Escolher jogada do jogador
+    print("Qual sua opção de jogada ?")
+    print("1 - Pedra")
+    print("2 - Papel")
+    print("3 - Tesoura")
+    escolha_jogador = int(input("Opção: "))
+
+    # Validando a escolha do jogador
+    if escolha_jogador != 1 and escolha_jogador != 2 and escolha_jogador != 3:
+        print("Escolha inválida. Digite 1, 2 ou 3.")
+    else:
+        # Escolher jogada do computador
+        escolha_computador = random.choice([1, 2, 3])
+
+        # Nome das jogadas
+        jogadas = {1: "Pedra", 2: "Papel", 3: "Tesoura"}
+
+        # Exibir escolhas
+        print(f"\nVocê escolheu: {jogadas[escolha_jogador]}")
+        print(f"O computador escolheu: {jogadas[escolha_computador]}")
+
+        # Determinar resultado
+        if escolha_jogador == escolha_computador:
+            resultado = "EMPATE"
+        elif (escolha_jogador == 1 and escolha_computador == 3) or \
+             (escolha_jogador == 2 and escolha_computador == 1) or \
+             (escolha_jogador == 3 and escolha_computador == 2):
+            resultado = "VITÓRIA"
+        else:
+            resultado = "DERROTA"
+
+        print(f"Resultado: {resultado}\n")
+
+    # Perguntar se o jogador quer jogar novamente
+    jogar_novamente = input("Jogar novamente (S/N)? ").strip().upper()
+
+print("Obrigado por jogar! Até logo.")
+
     
     
 
