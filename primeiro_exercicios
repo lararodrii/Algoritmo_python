@@ -917,6 +917,45 @@ else:
 print(f"O vencedor da eleição é: {vencedor}")
 
 
+Desafio 1 lista
+import random
+
+# Lista com os nomes dos alunos
+alunos = ["João", "Maria", "Pedro", "Ana", "Lucas"]
+
+# Pergunta quantos nomes deseja sortear
+quantidade_sorteios = int(input("Quantos nomes deseja sortear? "))
+
+# Verifica se a quantidade de sorteios não é maior que o número de alunos
+if quantidade_sorteios > len(alunos):
+    print("Não é possível sortear mais nomes do que o total de alunos.")
+else:
+    # Realiza o sorteio de múltiplos nomes sem repetição
+    alunos_sorteados = random.sample(alunos, quantidade_sorteios)
+
+    for aluno in alunos_sorteados:
+        print("Aluno sorteado:", aluno)
+
+Desafio 2 lista
+import random
+
+# Lista com os nomes dos alunos
+alunos = ["João", "Maria", "Pedro", "Ana", "Lucas"]
+
+# Pergunta quantos nomes deseja sortear
+quantidade_sorteios = int(input("Quantos nomes deseja sortear? "))
+
+# Verifica se a quantidade de sorteios não é maior que o número de alunos
+if quantidade_sorteios > len(alunos):
+    print("Não é possível sortear mais nomes do que o total de alunos.")
+else:
+    # Realiza o sorteio de múltiplos nomes sem repetição
+    alunos_sorteados = random.sample(alunos, quantidade_sorteios)
+
+    for aluno in alunos_sorteados:
+        print("Aluno sorteado:", aluno)
+
+
 PAPEL TESOURA
 import random
 
