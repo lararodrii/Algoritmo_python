@@ -1008,6 +1008,20 @@ while jogar_novamente == "S":
 
 print("Obrigado por jogar! Até logo.")
 
+DESAFIO 4
+#Criar um programa que leia um numero e exiba a tabuada de multiplicação do numero que foi lido.
+numero = int(input("Digite um número entre 1 e 10: "))
+
+if 1 <= numero <= 10:
+    print("Tabuada do", numero)
+    contador = 1
+    while contador <= 10:
+        print(f"{numero} x {contador} = {numero * contador}")
+        contador += 1  
+else:
+    print("Número fora do intervalo. Por favor, digite um número entre 1 e 10.")
+
+
     
     
 
