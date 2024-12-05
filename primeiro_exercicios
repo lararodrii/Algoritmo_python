@@ -1026,6 +1026,35 @@ for numero in range(1, 11):
     for contador in range(1, 11):
         print(f"{numero} x {contador} = {numero * contador}")
 
+# Inicializando a lista
+lista = [10, 20, 30, 20, 20, 30, 40, 50, -20, 60, 60, 60, -20, -20]
+
+# Imprimir a lista
+print("Lista:", lista)
+
+# Exibir a lista na ordem inversa
+print("Lista na ordem inversa:", lista[::-1])
+
+# Exibir o menor número da lista
+print("Menor número da lista:", min(lista))
+
+# Exibir o maior número da lista
+print("Maior número da lista:", max(lista))
+
+# Exibir o total de números da lista
+print("Total de números da lista:", len(lista))
+
+# Exibir a soma dos números da lista
+print("Soma dos números da lista:", sum(lista))
+
+# Exibir a média dos números da lista
+media = sum(lista) / len(lista) if len(lista) > 0 else 0
+print("Média dos números da lista:", media)
+
+# Exibir quantas vezes o número -20 apareceu na lista
+print("O número -20 apareceu", lista.count(-20), "vezes na lista")
+
+
     
     
 
